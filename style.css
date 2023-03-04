@@ -123,14 +123,27 @@ button:hover {
 	}
 	button {
 		margin-top: 10px;
+        font-size: 10px;
 	}
+    input {
+        font-size: 12px;
+        
+    }
+    
+    input::placeholder {
+        color: #ddd;
+        font-family: "Montserrat", sans-serif;
+    }
 	.wrapper {
-		width: 400px;
+		width: 350px;
 		margin-top: 100px;
 	}
-    .photo{
-        width: 100px;
-        height: 100px;
+	.photo {
+		width: 100px;
+		height: 100px;
+	}
+    .weather-info{
+        font-size: 15px;
     }
 	/* .wrapper {
 		width: 500px;
