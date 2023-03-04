@@ -125,9 +125,13 @@ button:hover {
 		margin-top: 10px;
 	}
 	.wrapper {
-		width: 500px;
+		width: 400px;
 		margin-top: 100px;
 	}
+    .photo{
+        width: 100px;
+        height: 100px;
+    }
 	/* .wrapper {
 		width: 500px;
 	}
