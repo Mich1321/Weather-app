@@ -53,15 +53,7 @@ button:hover {
 	color: #333;
 	background-color: #ddd;
 }
-#clock {
-	background-color: rgba(0, 0, 0, 0.8);
-	border: 2px solid white;
-	border-radius: 15px;
-	margin-bottom: 20px;
-	padding: 20px 40px;
-	font-size: 30px;
-	
-}
+
 .wrapper {
 	width: 800px;
 	padding: 20px 40px;
@@ -125,11 +117,7 @@ button:hover {
 	font-size: 14px;
 	color: tomato;
 }
-/* #clock {
-	margin-bottom: 20px;
-	color: #333;
-	font-size: 40px;
-} */
+
 @media (max-width: 576px) {
 	body {
 		font-size: 10px;

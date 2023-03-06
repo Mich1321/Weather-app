@@ -30,6 +30,10 @@ const getWeather = () => {
 
 			warning.textContent = "";
 			input.value = "";
+
+			let data = new Date();
+			let hours = data.getHours();
+
 			if (status.id >= 200 && status.id < 300) {
 				photo.setAttribute("src", "./img/thunderstorm.png");
 				body.setAttribute(
@@ -60,17 +64,17 @@ const getWeather = () => {
 					"style",
 					"background-image: linear-gradient(90deg, hsla(186, 33%, 94%, 1) 0%, hsla(216, 41%, 79%, 1) 100%)"
 				);
-			} else if (status.id === 800 && time.hours >= 16 && time.hours < 05) {
-				photo.setAttribute("src", "./img/moon.png");
+			} else if (status.id === 800 && hours >= 05 && hours < 20) {
+				photo.setAttribute("src", "./img/sun.png");
 				body.setAttribute(
 					"style",
 					"background-image: linear-gradient(90deg, hsla(1, 84%, 80%, 1) 0%, hsla(56, 100%, 50%, 1) 100%)"
 				);
 			} else if (status.id === 800) {
-				photo.setAttribute("src", "./img/sun.png");
+				photo.setAttribute("src", "./img/moon.png");
 				body.setAttribute(
 					"style",
-					"background-image: linear-gradient(90deg, hsla(1, 84%, 80%, 1) 0%, hsla(56, 100%, 50%, 1) 100%)"
+					"background-image: linear-gradient(90deg, hsla(221, 45%, 73%, 1) 0%, hsla(220, 78%, 29%, 1) 100%)"
 				);
 			} else if (status.id >= 800 && status.id < 900) {
 				photo.setAttribute("src", "./img/cloud.png");
@@ -83,31 +87,6 @@ const getWeather = () => {
 			}
 		})
 		.catch(() => (warning.textContent = "Wpisz poprawną nazwę miasta!"));
-
-	function time() {
-		let data = new Date(); //tworzymy obiekt typu data
-		let hours = data.getHours(); //pobieramy godzinę
-		let minutes = data.getMinutes(); //pobieramy minutę
-		let seconds = data.getSeconds(); //pobieramy sekundy
-
-		// przypisanie zera do godziny, minuty i sekundy, czyli np. 05 a nie 5
-		if (hours < 10) {
-			hours = "0" + hours;
-		}
-		if (minutes < 10) {
-			minutes = "0" + minutes;
-		}
-		if (seconds < 10) {
-			seconds = "0" + seconds;
-		}
-
-		//wyświetlenie zegarka w divie o id zegar
-		document.querySelector("#clock").innerHTML =
-			hours + " : " + minutes + " : " + seconds;
-
-		setTimeout(time, 1000); //samowywołanie się funkcji po 1s
-	}
-	window.addEventListener("load", time);
 };
 
 const enterKeyCheck = (e) => {
