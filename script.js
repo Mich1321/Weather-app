@@ -60,20 +60,19 @@ const getWeather = () => {
 					"style",
 					"background-image: linear-gradient(90deg, hsla(186, 33%, 94%, 1) 0%, hsla(216, 41%, 79%, 1) 100%)"
 				);
+			} else if (status.id === 800 && time.hours >= 16 && time.hours < 05) {
+				photo.setAttribute("src", "./img/moon.png");
+				body.setAttribute(
+					"style",
+					"background-image: linear-gradient(90deg, hsla(1, 84%, 80%, 1) 0%, hsla(56, 100%, 50%, 1) 100%)"
+				);
 			} else if (status.id === 800) {
 				photo.setAttribute("src", "./img/sun.png");
 				body.setAttribute(
 					"style",
 					"background-image: linear-gradient(90deg, hsla(1, 84%, 80%, 1) 0%, hsla(56, 100%, 50%, 1) 100%)"
 				);
-			} 
-			// else if (status.id === 800 && time() >= 20) {
-			// 	photo.setAttribute("src", "./img/moon.png");
-			// 	body.setAttribute(
-			// 		"style",
-			// 		"background-image: linear-gradient(90deg, hsla(1, 84%, 80%, 1) 0%, hsla(56, 100%, 50%, 1) 100%)"
-			// 	);
-			 else if (status.id >= 800 && status.id < 900) {
+			} else if (status.id >= 800 && status.id < 900) {
 				photo.setAttribute("src", "./img/cloud.png");
 				body.setAttribute(
 					"style",
