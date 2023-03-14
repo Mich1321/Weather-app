@@ -142,6 +142,9 @@ button:hover {
 	.weather-info {
 		font-size: 15px;
 	}
+	.headings p{
+		font-size: 8px;
+	}
 }
 /* @media (max-width: 768px) {
 }
